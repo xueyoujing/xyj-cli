@@ -1,0 +1,21 @@
+<template>
+    <el-table :data="tableData" style="width: 100%">
+    {{#each items}}
+        <el-table-column label="{{label}}" prop="{{prop}}"></el-table-column>
+    {{/each}}
+    </el-table>
+</template>
+
+<script>
+import { ref } from 'vue'
+
+export default {
+    setup() {
+        let tableData = ref([]);
+
+        return {
+            tableData
+        }
+    }
+}
+</script>
